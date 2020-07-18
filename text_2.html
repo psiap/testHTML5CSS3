@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Поля ввода</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+    <script type="text/javascript" href="JS.js"></script>
+     <script type="text/javascript">
+        function valid(form){
+		    var name = form.name.value;
+			name.replace(" ","") != "" ? alert("true") : alert("folse");
+		}
+     </script>
+</head>
+<body>
+    <form action="" method="post" name=test" onsubmit="valid(this)">
+	    <label for="text">Имя:</laberl>
+	    <input type="text" name="name" placeholder="Имя" id="name" /><br />
+		<label for="password">Пароль:</laberl>
+		<input type="password" name="password" placeholder="Пароль" id="password" /><br />
+		<label for="password">reПароль:</laberl>
+		<input type="password" name="rePassword" placeholder="Введите Пароль" id="password" /><br />
+		<span>Пол:</span>
+	    
+		<input type="radio" name="state" id="male" value="Мужской"/>Мужской<label for="male" value="Мужской" />
+		
+		<input type="radio" name="state" id="female" value="Женский"/>Женский<label for="female" value="Женский" />
+		<input type="submit" name="submit" value="Готово" />
+	</form>
+</body>
+</html>
